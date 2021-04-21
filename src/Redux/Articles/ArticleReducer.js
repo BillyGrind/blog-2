@@ -2,9 +2,10 @@ const INITIAL_STATE = {
     articles: []
 }
 
-function ArticleReducer(state = INITIAL_STATE, action) {
 
-    switch (action.type) {
+function articleReducer(state = INITIAL_STATE, action){
+
+    switch(action.type){
         case "LOADARTICLES": {
             return {
                 ...state,
@@ -12,18 +13,22 @@ function ArticleReducer(state = INITIAL_STATE, action) {
             }
         }
     }
+
     return state;
 }
+export default articleReducer;
 
-export default ArticleReducer;
+
 
 export const getArticles = () => dispatch => {
+
     fetch("https://jsonplaceholder.typicode.com/posts")
-        .then(response => response.json())
-        .then(data => {
-            dispatch({
-                type: 'LOADARTICLES',
-                payload: data
-            })
+    .then(response => response.json())
+    .then(data => {
+        dispatch({
+            type: 'LOADARTICLES',
+            payload: data
         })
+    })
+
 }
