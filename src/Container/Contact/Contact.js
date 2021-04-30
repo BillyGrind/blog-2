@@ -1,9 +1,18 @@
 import React from 'react'
+import './Contact.css'
 
 export default function Contact() {
     return (
-        <div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi unde suscipit aut nisi natus maxime est. Quae natus iste quas fugit laboriosam ullam illo consequuntur ratione voluptates, eos quos eum commodi et accusantium odit. Laboriosam excepturi delectus, culpa tenetur mollitia error dolores necessitatibus officiis assumenda dolor autem. Reprehenderit, in asperiores!</p>
+        <div className="container-contact">
+            <h1>Contactez-nous </h1>
+            <p>Par mail: udfusidbg@gmail.com</p>
+            <p>Par tel: 666-996-666</p>
+            <p>Par mail: udfusidbg@gmail.com</p>
+            <ul>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Linkd</li>
+            </ul>
         </div>
     )
 }
